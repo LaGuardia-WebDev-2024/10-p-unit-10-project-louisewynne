@@ -81,7 +81,7 @@ var reset = function(){
   }
 
   for(var i = 0; i < planetTotal; i++){
-    planetXPos.push(random(0,600));
-    planetYPos.push(random(0,400));
+    planetXPos.push(200);
+    planetYPos.push(300);
   }
 }
