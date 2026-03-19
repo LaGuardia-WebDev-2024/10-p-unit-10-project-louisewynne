@@ -1,7 +1,3 @@
-var starXPos = [];
-var starYPos = [];
-var star = "⭐️";
-var starTotal = 100;
 
 var planetXPos = [];
 var planetYPos = [];
@@ -51,10 +47,6 @@ var display = function(){
     text(planet, planetXPos[i], planetYPos[i]);
   }
 
-  for(var i = 0; i < starXPos.length; i ++){
-    text(star, starXPos[i], starYPos[i]);
-  }
-
   fill(0,0,0);
   rect(0,400,600,50);
   fill(255,255,255);
@@ -68,20 +60,14 @@ var display = function(){
 }
 
 var reset = function(){
-  starXPos = [];
-  starYPos = [];
+ 
   planetXPos = [];
   planetYPos = [];
   planetFound = 0;
 
 
-  for(var i = 0; i < starTotal; i++){
-    starXPos.push(random(0,600));
-    starYPos.push(random(0,400));
-  }
-
   for(var i = 0; i < planetTotal; i++){
-    planetXPos.push(200);
-    planetYPos.push(300);
+    planetXPos.push(random(0,600));
+    planetYPos.push(random(0,600));
   }
 }

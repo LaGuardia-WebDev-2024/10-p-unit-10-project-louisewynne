@@ -4,7 +4,7 @@ var cossiantXPos = [];
 var cossiantYPos = [];
 var cossiant = "🥐";
 var cossiantTotal = 3;
-var cossiatinFound = 0;
+var cossiantFound = 0;
 
 setup = function() {
 
@@ -57,14 +57,10 @@ setup = function() {
   
   textSize(15);
   fill(0,0,0);
-  text("Buy 0/3 crossiants" + criosiant + "s   |   " + crossiant + " " + crossiantFound + "/" + crossiantTotal, "0/1 baguette🥖, 0/1 bread🍞,", 20,360);
+  text("Buy 0/3 crossiants" + crossiant + crossiantFound + "/" + crossiantTotal + ", 0/1 baguette🥖, 0/1 bread🍞,", 20,360);
   text(" 0/4 cookies🍪, 0/2 donuts🍩, and 0/3 pretzels🥨.", 20, 380);
 
-  if(keyPressed){
-    if(key == 'r'){
-      reset();
-    }
-   }
+  
 }
 
 draw = function(){   
@@ -89,15 +85,6 @@ var check = function(xClick, yClick){
 var display = function(){
  
 
-  for(var i = 0; i < crossiantXPos.length; i ++){
-    text(crossiant, crossiantXPos[i], crossiantYPos[i]);
-  }
-
-
-  if(planetFound == planetTotal){
-    fill(0, 200, 200);
-    textSize(50);
-    text("Press 'r' to restart \nthe game", 50, 200);
-  }
+  
 }
 
