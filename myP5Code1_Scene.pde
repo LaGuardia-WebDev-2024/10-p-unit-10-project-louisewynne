@@ -17,10 +17,12 @@ setup = function() {
   textSize(30);
 
   //shelf 1 - - - - - - - ->
+  <div class = crossiants>
   while(shelf1X < 200){
     text("🥐", shelf1X, 170);
     shelf1X += 40;
   }
+  </div>
 
   while(shelf1X < 320){
     text("🍩", shelf1X, 170);
@@ -72,14 +74,10 @@ mouseClicked = function(){
   check(mouseX, mouseY);
 }
 
-var check = function(xClick, yClick){
-  for(var i = 0; i < crossiantXPos.length; i++){
-    if(dist(xClick - 5, yClick - 5, crossiantXPos[i], crossiantYPos[i])<15){
-      crossiantXPos.splice(i, 1);
-      crossiantYPos.splice(i, 1);
-      crossiantFound++;
-    }
-  }
+
+
+if(dist(xClick - 5, yClick - 5, shelf1X, 170)<15){
+  crossiants(delete)
 }
 
 var display = function(){
