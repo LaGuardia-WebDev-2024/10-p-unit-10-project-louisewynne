@@ -1,10 +1,11 @@
 //var bakeryLabels = ["Crossiants","Baguettes"];
 
-var cossiantXPos = [];
-var cossiantYPos = [];
-var cossiant = "🥐";
-var cossiantTotal = 3;
-var cossiantFound = 0;
+var treats = ["🥐", "🍩", "🍞", "🥖", "🥨", "🍪", "🥨", ]
+
+var crossiants = []
+
+var crossiantEnd = 200
+
 
 setup = function() {
 
@@ -17,55 +18,67 @@ setup = function() {
   textSize(30);
 
   //shelf 1 - - - - - - - ->
-  <div class = crossiants>
-  while(shelf1X < 200){
-    text("🥐", shelf1X, 170);
+
+  //crossiants
+  while(shelf1X < crossiantEnd){
+    text(treats[0], shelf1X, 170);
     shelf1X += 40;
   }
-  </div>
 
+  //donuts
   while(shelf1X < 320){
-    text("🍩", shelf1X, 170);
+    text(treats[1], shelf1X, 170);
     shelf1X += 40;
   }
 
   //shelf 2 - - - - - - - ->
+
+  //bread
   while(shelf2X < 140){
-    text("🍞", shelf2X, 250);
+    text(treats[2], shelf2X, 250);
     shelf2X += 40;
   }
 
+  //bagguette
   while(shelf2X < 230){
-    text("🥖", shelf2X, 250);
+    text(treats[3], shelf2X, 250);
     shelf2X += 40;
   }
 
+  //pretzel
   while(shelf2X < 320){
-    text("🥨", shelf2X, 250);
+    text(treats[4], shelf2X, 250);
     shelf2X += 40;
   }
 
   //shelf 3 - - - - - - - ->
+
+  //pretzel
   while(shelf3X < 230){
-    text("🍪", shelf3X, 320);
+    text(treats[4], shelf3X, 320);
     shelf3X += 40;
   }
 
+  //cookies
   while(shelf3X < 320){
-    text("🥨", shelf3X, 320);
+    text(treats[5], shelf3X, 320);
     shelf3X += 40;
   }
 
   
   textSize(15);
   fill(0,0,0);
-  text("Buy 0/3 crossiants" + crossiant + crossiantFound + "/" + crossiantTotal + ", 0/1 baguette🥖, 0/1 bread🍞,", 20,360);
+  text("Buy 0/3 crossiants, 0/1 baguette🥖, 0/1 bread🍞,", 20,360);
   text(" 0/4 cookies🍪, 0/2 donuts🍩, and 0/3 pretzels🥨.", 20, 380);
 
   
 }
 
 draw = function(){   
+
+     if(key == c){
+
+     }
 
 }
 
@@ -76,9 +89,7 @@ mouseClicked = function(){
 
 
 
-if(dist(xClick - 5, yClick - 5, shelf1X, 170)<15){
-  crossiants(delete)
-}
+
 
 var display = function(){
  
