@@ -4,8 +4,8 @@ var treats = ["🥐", "🍩", "🍞", "🥖", "🥨", "🍪", "🥨", ]
 
 var crossiants = []
 
-var crossiantEnd = 200
-
+var crossiantEnd = [200, 160, 120, 80]
+var donutEnd = 320
 
 setup = function() {
 
@@ -20,15 +20,13 @@ setup = function() {
   //shelf 1 - - - - - - - ->
 
   //crossiants
-  while(shelf1X < crossiantEnd){
+  for(shelf1X = 60; shelf1X < crossiantEnd[0]; shelf1X += 40){
     text(treats[0], shelf1X, 170);
-    shelf1X += 40;
   }
 
   //donuts
-  while(shelf1X < 320){
+  for(shelf1X = 220; shelf1X < donutEnd; shelf1X += 40){
     text(treats[1], shelf1X, 170);
-    shelf1X += 40;
   }
 
   //shelf 2 - - - - - - - ->
@@ -68,16 +66,16 @@ setup = function() {
   
   textSize(15);
   fill(0,0,0);
-  text("Buy 0/3 crossiants, 0/1 baguette🥖, 0/1 bread🍞,", 20,360);
-  text(" 0/4 cookies🍪, 0/2 donuts🍩, and 0/3 pretzels🥨.", 20, 380);
+  text("Buy 3 crossiants, 1 baguette🥖, 1 bread🍞,", 20,360);
+  text(" 4 cookies🍪, 2 donuts🍩, and 3 pretzels🥨.", 20, 380);
 
   
 }
 
 draw = function(){   
 
-     if(key == c){
-
+     if(key === c){
+        crossiantEnd.shift();
      }
 
 }
@@ -91,9 +89,8 @@ mouseClicked = function(){
 
 
 
-var display = function(){
+var display = function(xClick, yClick){
  
-
   
 }
 

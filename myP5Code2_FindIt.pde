@@ -9,6 +9,11 @@ setup = function() {
    size(600, 450); 
 
    reset();
+
+    while(shelf1X < crossiantEnd){
+    text(treats[0], shelf1X, 170);
+    shelf1X += 40;
+  }
 }
 
 draw = function(){   
