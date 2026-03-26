@@ -64,25 +64,18 @@ setup = function() {
   }
 
   
-  textSize(15);
-  fill(0,0,0);
-  text("Buy 3 crossiants, 1 baguette🥖, 1 bread🍞,", 20,360);
-  text(" 4 cookies🍪, 2 donuts🍩, and 3 pretzels🥨.", 20, 380);
 
   
 }
 
 draw = function(){   
 
-     if(key === c){
-        crossiantEnd.shift();
-     }
+
 
 }
 
 
-mouseClicked = function(){
-  check(mouseX, mouseY);
+mousePressed = function(){
 }
 
 
