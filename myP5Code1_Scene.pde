@@ -75,11 +75,10 @@ draw = function(){
 }
 
 
-mousePressed = function(){
-}
-
-
-
+mouseClicked = function(){
+  textSize(20);
+  text("❤", mouseX, mouseY);
+};
 
 
 var display = function(xClick, yClick){
